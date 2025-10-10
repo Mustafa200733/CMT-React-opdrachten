@@ -25,7 +25,7 @@
 ul {
   list-style: none;    
   display: flex;       
-  gap: 20px;          
+  gap: 200px;          
   margin: 0;
   padding: 25px;
 
@@ -33,7 +33,7 @@ ul {
 
 li {
   font-size: 25px;
-  space
+  
       justify-content: space-between;
 }
 
@@ -46,6 +46,7 @@ li a {
   
 }
 
-li a:hover {
-  color: darkblue;
+.layout-container {
+  width: 80vw;
+  margin: 0 auto;
 }
