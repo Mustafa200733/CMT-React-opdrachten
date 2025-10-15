@@ -1,3 +1,4 @@
+import BookCounter from './BookCounter';
 import {useState} from 'react';
 import Book from './Book';
 
@@ -24,17 +25,24 @@ image :'./images/book-3.png',
 ]);
 
 
-  return (
-    <section className='container'>
-   {books.map((book) => (     
-    <Book 
-    title={book.title}
-    author={book.author}
-    image={book.image}
+    return (
+    <section className="BookBody">
+      <BookCounter aantal={books.length} />
+ 
+   
+      {books.map((book, index) => (
+        <Book
+          key={index}
+          title={book.title}
+          author={book.author}
+          img={book.image}
+          button={book.aantalKeerGelezen}
+          btn={book.Btn}
         />
- ))}
+      ))}
     </section>
   );
 };
+ 
 export default BookList;
 
