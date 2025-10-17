@@ -7,11 +7,7 @@ const Book = ({ img, title, author }) => {
     setAantalKeerGelezen(aantalKeerGelezen + 1);
   }
 
-  function verlaagTeller() {
-    setAantalKeerGelezen(
-      aantalKeerGelezen > 0 ? aantalKeerGelezen - 1 : 0
-    );
-  }
+
 
   return (
     <section className="book-container">
@@ -20,9 +16,7 @@ const Book = ({ img, title, author }) => {
       <button onClick={verhoogTeller}>
         Keer gelezen: {aantalKeerGelezen}
       </button>
-      <button onClick={verlaagTeller}>
-        Verlaag: {aantalKeerGelezen}
-      </button>
+    
       <h3>{author}</h3>
     </section>
   );
