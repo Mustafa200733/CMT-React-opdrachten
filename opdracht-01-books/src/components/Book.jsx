@@ -7,8 +7,6 @@ const Book = ({ img, title, author }) => {
     setAantalKeerGelezen(aantalKeerGelezen + 1);
   }
 
-
-
   return (
     <section className="book-container">
       <img className="image" src={img} alt={title} />
