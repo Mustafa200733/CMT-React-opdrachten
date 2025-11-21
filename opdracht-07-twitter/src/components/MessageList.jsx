@@ -1,11 +1,15 @@
 import Message from "./Message";
 
-const MessageList = () => {
+const MessageList = ({name, message}) => {
     return ( 
         <>
-    <Message/>
-    <Message/>
-    <Message/>
+    <Message name={name} message={message}/>
+    <Message name={name} message={message}/>
+    <Message name={name} message={message}/>
+    <Message name={name} message={message}/>
+
+
+      
        </>
      );
 }

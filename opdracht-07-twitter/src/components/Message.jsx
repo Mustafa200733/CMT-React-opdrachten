@@ -1,8 +1,8 @@
-const Message = () => {
+const Message = ({name, message}) => {
     return (
         <>
-<h2>Naam persoon:</h2>
-<p>Dit is bericht 1</p>
+<h2>{name}</h2>
+<p>{message}</p>
 </>
       );
 }
