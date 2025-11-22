@@ -1,11 +1,13 @@
 import './App.css'
+import TodoList from './components/TodoList'
 
 function App() {
 
   return (
-    <>
-      <h1>Opdracht 8 - To Do</h1>
-    </>
+  
+<TodoList/>
+
+    
   )
 }
 
