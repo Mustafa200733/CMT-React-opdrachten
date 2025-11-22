@@ -15,16 +15,32 @@ If you are developing a production application, we recommend using TypeScript wi
 
 
 1.Wat moet ik maken?
-De gebruiker moet een todo lijst zien
-Als de gebruiker de todo invult en op toevoegen klikt moet het een todo toevegen
-Als de gebruiker op toevoegen drukt moet het todo zien te verschijnen onder het formulier.
+Een input
+Een button
+Een lijst van taken 
+Tekst typen
+Op ‘Toevoegen’ klikken
+De ingevoerde tekst (state)
+De lijst met taken (state)
 
 2.Welke componenten heb ik nodig?
-Todo.jsx, 
+TodoList.jsx, 
+
 3.Welke state heb ik nodig?
-
+import { useState } from 'react';
 4.Wat is de flow?
-
+Gebruiker typt → inputValue wordt geüpdatet
+Gebruiker klikt op toevoegen
+tasks krijgt een nieuwe taak erbij
 5.Pseudo-code
+- Maak state: inputValue = ""
+- Maak state: tasks = []
+- Bij veranderen input → update inputValue
+- Bij klikken → voeg inputValue toe aan tasks
+- Toon tasks in een lijst
+- Leeg inputValue
 
 6.De 3-check
+TaskInput component (input + button)
+TaskList component (lijst tonen)
+App component → bevat de state
