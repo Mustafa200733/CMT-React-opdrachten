@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const CreateMessage = ({textInput}) => {
+const CreateMessage = ({textInput, setMessage, setTextInput, message}) => {
 
 
    const userInputHandler = (e) => {

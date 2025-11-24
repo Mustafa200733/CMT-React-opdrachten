@@ -5,16 +5,16 @@ import MessageList from './components/MessageList'
 
 function App() {
   const [textInput, setTextInput] = useState('');
-const [message, setMessage] = useState([])
+  const [message, setMessage] = useState([]);
 
-let name = "Jason";
+let name = "Mustafa";
   return (
-    <>
-    <CreateMessage />
+  <>
+    <CreateMessage textInput={textInput} setMessage={setMessage} setTextInput={setTextInput} message={message} />
  <MessageList name={name} message={message}/>
-   
-    </>
-  )
-}
+   </>
+  
+  );
+};
 
 export default App
