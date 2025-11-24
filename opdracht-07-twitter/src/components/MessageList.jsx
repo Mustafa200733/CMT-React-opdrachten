@@ -14,4 +14,3 @@ const MessageList = ({name, message}) => {
 }
  
 export default MessageList;
-

@@ -1,14 +1,20 @@
+import { useState } from 'react';
 import './App.css'
-import TodoList from './components/TodoList'
+import CreateToDo from './components/CreateToDo'
+import ToDoList from './components/ToDoList'
+
 
 function App() {
+  const [textInput, setTextInput] = useState('');
+  const [todo, setTodo] = useState([]);
 
   return (
+  <>
+    <CreateToDo textInput={textInput} setTodo={setTodo} setTextInput={setTextInput} todo={todo} />
+ <ToDoList todo={todo}/>
+   </>
   
-<TodoList/>
-
-    
-  )
-}
+  );
+};
 
 export default App
