@@ -1,6 +1,7 @@
 const ToDo = ({todo}) => {
     return (
         <>
+        
 <p>{todo}</p>
 </>
       );

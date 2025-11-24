@@ -10,11 +10,11 @@ function App() {
 
   return (
   <>
+    <h1 className="h1">To-Do-List</h1>
     <CreateToDo textInput={textInput} setTodo={setTodo} setTextInput={setTextInput} todo={todo} />
- <ToDoList todo={todo}/>
+    <ToDoList todo={todo}/>
    </>
-  
-  );
+   );
 };
 
 export default App
