@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import './App.css'
 import CreateToDo from './components/CreateToDo'
 import ToDoList from './components/ToDoList'
 
@@ -9,11 +8,14 @@ function App() {
   const [todo, setTodo] = useState([]);
 
   return (
-  <>
-    <h1 className="h1">To-Do-List</h1>
+    
+  <section className='flex flex-col items-center justify-center min-h-screen text-blue-600 font-sans'>
+    <h1 className="text-4xl font-bold mb-6 ">Mustafa To-Do-List</h1>
     <CreateToDo textInput={textInput} setTodo={setTodo} setTextInput={setTextInput} todo={todo} />
     <ToDoList todo={todo}/>
-   </>
+   </section>
+
+   
    );
 };
 

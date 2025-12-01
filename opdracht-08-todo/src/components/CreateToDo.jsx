@@ -16,8 +16,9 @@ const submitTodoHandler = (e) => {
 
 return (  
   <form action="">
-  <textarea value={textInput} cols="50" rows="1" onChange={userInputHandler}></textarea>
-  <button onClick={submitTodoHandler}>Toevoegen</button>
+  <textarea className="bg-white" value={textInput} cols="50" rows="1" onChange={userInputHandler}></textarea>
+  <button className="bg-amber-500 font-bold "
+  onClick={submitTodoHandler}>Toevoegen</button>
   </form>
         
     );
