@@ -1,7 +1,7 @@
 // src/Pages/Detail.page.jsx
 import { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import animals from '../animals.js';
+import data from '../data.js';
 
 const DetailPage = () => {
   const { id} = useParams();
