@@ -1,35 +1,37 @@
-import BookCounter from './BookCounter';
 import {useState} from 'react';
+import booksData from '../data.js';
+import BookCounter from './BookCounter';
 import Book from './Book';
 
 const BookList = () => {
-  
-  const [books, setBooks] = useState([{
+const [books, setBooks] = useState(booksData);
+const [searchInput, setSearchInput] = useState('');
 
-title : 'Harry potter And The Sorcerers stone',
-author :  'Joanne Rowling',
-image : './images/book-1.png',
-},
+const searchHandler = (e) => {
+  let newSearch = e.target.value;
+  setSearchInput(newSearch);
 
-{
-title :'Geronimo Stilton Fantasia 4',
-author :'Elisabetta Dami',
-image : './images/book-2.png',
-},
 
-{
-title :'The Hunger Games',
-author : 'Suzanne Collin',
-image :'./images/book-3.png',
-},
-]);
+  const filteredBooks = booksData.filter((book) => 
+
+    book.title.toLowerCase().includes(newSearch.toLowerCase())
+  )
+
+setBooks(filteredBooks)
+
+};
 
 
     return (
+    <>
+      <div className='search'>
+        <input type="text" placeholder='zoek hier een boek' name='search' 
+         onChange={searchHandler}/>
+     
+      </div>
+
     <section className="BookBody">
       <BookCounter aantal={books.length} />
- 
-   
       {books.map((book, index) => (
         <Book
           key={index}
@@ -41,8 +43,8 @@ image :'./images/book-3.png',
         />
       ))}
     </section>
+    </>
   );
 };
- 
 export default BookList;
 

@@ -47,21 +47,22 @@ ul {
   gap: 200px;          
   margin: 0;
   padding: 25px;
+  ;
 
 }
 
 li {
   font-size: 25px;
-  
       justify-content: space-between;
+      
 }
 
 
 li a {
   text-decoration: none;
   color: white;
-  font-weight: 500;
   transition: color 0.3s ease;
+  
   
 }
 
