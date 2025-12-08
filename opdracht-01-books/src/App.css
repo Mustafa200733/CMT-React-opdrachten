@@ -39,6 +39,7 @@
   align-items: center;
   padding: 10px 50px;
   font-size: 15px;
+  
 }
 
 ul {
@@ -47,25 +48,40 @@ ul {
   gap: 200px;          
   margin: 0;
   padding: 25px;
-  ;
+  border: 10px;
+position: relative ;
+  top: 7vh ;
+justify-content: center;}
 
-}
 
-li {
-  font-size: 25px;
-      justify-content: space-between;
-      
-}
+
+
 
 
 li a {
   text-decoration: none;
-  color: blue;
-height: ;  
-  
+  font-size: 1.5rem;
+  color: black;
+
 }
 
 .layout-container {
   width: 80vw;
   margin: 0 auto;
+}
+
+
+
+
+
+
+
+.layout-container {
+  width: 80vw;
+  margin: 0 auto;
+}
+
+.favorited-text{
+  color: rgb(19, 38, 209);
+  font-size: 1rem;
 }
