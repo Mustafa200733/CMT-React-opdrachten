@@ -1,12 +1,15 @@
-import './App.css'
+import React, { useState } from 'react';
+import FlashCardList from './components/FlashCardList';
+import data from './components/data';
 
 function App() {
+  const [FlashCards, setFlashCards] = useState(data);
 
   return (
-    <>
-      <h1>Opdracht 13 - Flashcard Quiz</h1>
-    </>
-  )
+    <div className="min-h-screen bg-gray-100 flex items-center justify-center p-6">
+      <FlashCardList FlashCards={FlashCards} />
+    </div>
+  );
 }
 
-export default App
+export default App;
