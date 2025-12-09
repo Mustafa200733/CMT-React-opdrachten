@@ -72,6 +72,10 @@ const BookList = () => {
             button={book.aantalKeerGelezen}
             btn={book.Btn}
             category={book.category}
+            description={book.description}
+            year={book.year}
+            pages={book.pages}
+
           />
         ))}
       </section>

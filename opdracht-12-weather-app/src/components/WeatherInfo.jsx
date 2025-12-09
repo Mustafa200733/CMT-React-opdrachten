@@ -1,12 +1,10 @@
 import React from "react";
 
 const WeatherInfo = ({ data }) => {
-  // als er geen data is dan laten we gewoon niks zien
   if (!data) {
     return null;
   }
 
-  // hier maken we de link voor het weer-plaatje
   const plaatje = "https://openweathermap.org/img/w/" + data.weather[0].icon + ".png";
 
   return (

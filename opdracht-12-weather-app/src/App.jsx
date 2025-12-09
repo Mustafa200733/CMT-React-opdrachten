@@ -3,16 +3,12 @@ import WeatherInfo from "./components/WeatherInfo";
 import "./App.css";
 
 const App = () => {
-  // hier bewaren we de stad die je intypt
   const [city, setCity] = useState("");
 
-  // hier komt het weer dat we ophalen
   const [weather, setWeather] = useState(null);
 
-  // mijn API key om het weer op te vragen
   const apiKey = "d8a317cc158a78de7232b05ad8139eb9";
 
-  // als je op de knop klikt dan vragen we het weer op
   const getWeather = (e) => {
     e.preventDefault();
 
@@ -21,7 +17,7 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}
   .then((data) => {
     setWeather(data);
   });
-
+  
   };
 
   return (
@@ -42,7 +38,7 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}
         </button>
       </form>
 
-      {/* hier laten we het weer zien als we het hebben */}
+      
       <WeatherInfo data={weather} />
     </>
   );
