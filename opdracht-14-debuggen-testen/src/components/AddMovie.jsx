@@ -1,18 +1,21 @@
+import { useState } from "react";
 
 const AddMovie = ({ onAdd })  => {
   const [movie, setMovie] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (movie === '') {
+
+    const trimmed = movie.trim(); // <-- fix voor edge cases
+
+    if (trimmed === '') {
       alert('Movie name cannot be empty');
       return;
     }
-    onAdd(movie); 
- 
-  };
 
-  setMovie(''); 
+    onAdd(trimmed);
+    setMovie('');
+  };
 
   return (
     <form onSubmit={handleSubmit}>
