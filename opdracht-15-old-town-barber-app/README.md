@@ -87,7 +87,7 @@ Maak utility functions voor:
 
 ### **First Time User:**
 - Check of userProfile bestaat in localStorage
-- Zo nee: toon alleen UserProfile component met welkomst tekst
+- Zo nee: toon alleen UserProfile component met welkom tekst
 - Na profiel aanmaken: ga naar main app
 
 ### **Main App Layout:**
