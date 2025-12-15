@@ -6,8 +6,7 @@ const AddMovie = ({ onAdd })  => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const trimmed = movie.trim(); // <-- fix voor edge cases
-
+    const trimmed = movie.trim(); 
     if (trimmed === '') {
       alert('Movie name cannot be empty');
       return;
