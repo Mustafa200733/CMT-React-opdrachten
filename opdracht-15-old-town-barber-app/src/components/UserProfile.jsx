@@ -9,13 +9,11 @@ const UserProfile = ({ initialData, onSave }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Validatie
     if (!name.trim() || !email.trim() || !phone.trim()) {
       toast.error('Vul alle velden in!');
       return;
     }
 
-    // Opslaan
     onSave({ name, email, phone });
     toast.success('Profiel opgeslagen!');
   };
@@ -30,29 +28,25 @@ const UserProfile = ({ initialData, onSave }) => {
           placeholder="Naam"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          className="w-full p-2 border rounded"
-        />
+          className="w-full p-2 border rounded"/>
 
         <input
           type="email"
           placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="w-full p-2 border rounded"
-        />
+          className="w-full p-2 border rounded" />
 
         <input
           type="tel"
           placeholder="Telefoon"
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
-          className="w-full p-2 border rounded"
-        />
+          className="w-full p-2 border rounded"/>
 
         <button
           type="submit"
-          className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition"
-        >
+          className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">
           Opslaan
         </button>
       </form>

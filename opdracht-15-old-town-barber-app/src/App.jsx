@@ -12,7 +12,7 @@ import {
   saveUserProfile,
   getAppointments,
   saveAppointments
-} from './utils/localStorage';
+} from './utils/localStorage.js';
 
 import './App.css';
 
@@ -21,12 +21,14 @@ function App() {
   const [appointments, setAppointments] = useState(() => getAppointments());
   const [showProfile, setShowProfile] = useState(() => !getUserProfile());
 
-  // Profiel opslaan
+  // profiel opslaan
   useEffect(() => {
-    if (userProfile) saveUserProfile(userProfile);
+    if (userProfile) {
+      saveUserProfile(userProfile);
+    }
   }, [userProfile]);
 
-  // Afspraken opslaan
+  // afspraken opslaan
   useEffect(() => {
     saveAppointments(appointments);
   }, [appointments]);
@@ -64,7 +66,6 @@ function App() {
     <div className="min-h-screen bg-gray-50">
       <ToastContainer position="top-right" />
 
-      {/* Header */}
       <header className="flex justify-between items-center p-4 bg-gray-200 shadow">
         <h1 className="text-2xl font-bold">Old Town Barber</h1>
 
@@ -76,7 +77,6 @@ function App() {
         </button>
       </header>
 
-      {/* UserProfile */}
       {showProfile && (
         <div className="p-4 bg-white shadow rounded m-4">
           <UserProfile
@@ -86,7 +86,6 @@ function App() {
         </div>
       )}
 
-      {/* Main content */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4">
         <div className="space-y-4">
           <ShopInfo />
